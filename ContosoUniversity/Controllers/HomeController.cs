@@ -1,17 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models.SchoolViewModels;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoUniversity.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly SchoolContext _context;
-
-        public HomeController(SchoolContext context)
+        public IActionResult Index()
         {
-            _context = context;
+            return View();
         }
 
         public IActionResult About()
